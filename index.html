@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="base.css">
-     <link rel="stylesheet" href="chat.css"> -->
-      <link rel="stylesheet" href="prem.css">
+    <title>PK Samayal</title>
+    <link rel="stylesheet" href="prem.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Radley:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="customer">
@@ -23,114 +21,178 @@
                 <button id="bill">Bill</button>
                 <button id="help">Help</button>
             </div>
-            <!-- Hamburger Icon -->
             <div id="hamburger" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-        
 
         <div id="dish">
-<!-- Starters Section -->
-<div id="starters" class="dish-container">
-    <h1 id="h1">Starters</h1>
-    <div id="s1" class="dish">
-        <p>Chicken Nuggets</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-    <div id="s2" class="dish">
-        <p>Chicken 65</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-    <div id="s3" class="dish">
-        <p>Fish Fry</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-</div>
+            <!-- Starters Section -->
+            <div id="starters" class="dish-container">
+                <h1>Starters</h1>
+                <div id="s1" class="dish">
+                    <p>Chicken Nuggets</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('s1', -1)">-</button>
+                        <span class="fixed-width" id="s1-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('s1', 1)">+</button>
+                    </div>
+                </div>
+                <div id="s2" class="dish">
+                    <p>Chicken 65</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('s2', -1)">-</button>
+                        <span class="fixed-width" id="s2-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('s2', 1)">+</button>
+                    </div>
+                </div>
+                <div id="s3" class="dish">
+                    <p>Fish Fry</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('s3', -1)">-</button>
+                        <span class="fixed-width" id="s3-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('s3', 1)">+</button>
+                    </div>
+                </div>
+            </div>
 
-<!-- Desert Section -->
-<div id="desert" class="dish-container">
-    <h1 id="h2">Desert</h1>
-    <div id="d1" class="dish">
-        <p>Brownie</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-    <div id="d2" class="dish">
-        <p>Chocolate Icecream</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-    <div id="d3" class="dish">
-        <p>Chocolate Cake</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-</div>
+            <!-- Dessert Section -->
+            <div id="desert" class="dish-container">
+                <h1>Dessert</h1>
+                <div id="d1" class="dish">
+                    <p>Brownie</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('d1', -1)">-</button>
+                        <span class="fixed-width" id="d1-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('d1', 1)">+</button>
+                    </div>
+                </div>
+                <div id="d2" class="dish">
+                    <p>Chocolate Icecream</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('d2', -1)">-</button>
+                        <span class="fixed-width" id="d2-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('d2', 1)">+</button>
+                    </div>
+                </div>
+                <div id="d3" class="dish">
+                    <p>Chocolate Cake</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('d3', -1)">-</button>
+                        <span class="fixed-width" id="d3-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('d3', 1)">+</button>
+                    </div>
+                </div>
+            </div>
 
-<!-- Main Dish Section -->
-<div id="main" class="dish-container">
-    <h1 id="h3">Main Dish</h1>
-    <div id="m1" class="dish">
-        <p>Chicken Briyan</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
+            <!-- Main Dish Section -->
+            <div id="main" class="dish-container">
+                <h1>Main Dish</h1>
+                <div id="m1" class="dish">
+                    <p>Chicken Briyan</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('m1', -1)">-</button>
+                        <span class="fixed-width" id="m1-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('m1', 1)">+</button>
+                    </div>
+                </div>
+                <div id="m2" class="dish">
+                    <p>Mutton Briyn</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('m2', -1)">-</button>
+                        <span class="fixed-width" id="m2-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('m2', 1)">+</button>
+                    </div>
+                </div>
+                <div id="m3" class="dish">
+                    <p>Fish Briyan</p>
+                    <div class="add">
+                        <button class="quantity-btn" onclick="changeQuantity('m3', -1)">-</button>
+                        <span class="fixed-width" id="m3-count">Add</span>
+                        <button class="quantity-btn" onclick="changeQuantity('m3', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div id="submit-section">
+                <button id="submit">Submit</button>
+            </div>
+
+            <!-- Order Summary Section -->
+            <div id="order-summary" style="margin-top: 30px; padding: 10px; background: #f0f0f0;">
+                <h2>Order Summary:</h2>
+                <ul id="order-list"></ul>
+            </div>
         </div>
     </div>
-    <div id="m2" class="dish">
-        <p>Mutton Briyn</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-    <div id="m3" class="dish">
-        <p>Fish Briyan</p>
-        <div class="add">
-            <button class="quantity-btn" onclick="sub()">-</button>
-            <span class="fixed-width">Add</span>
-            <button class="quantity-btn" onclick="add()">+</button>
-        </div>
-    </div>
-</div>
 
+    <script>
+        // Function to change the quantity for each dish
+        function changeQuantity(dishId, increment) {
+            var countElement = document.getElementById(dishId + '-count');
+            var currentCount = countElement.innerHTML;
+            var count = currentCount === 'Add' ? 0 : parseInt(currentCount);
 
+            count += increment;
 
+            if (count < 0) count = 0;  // Prevent negative counts
+            if (count === 0) {
+                countElement.innerHTML = 'Add';  // Show 'Add' when the count is zero
+            } else {
+                countElement.innerHTML = count;  // Display the updated count
+            }
+        }
+
+        // Function to submit the order and display the summary
+        function submitOrder() {
+            var orderSummary = [];
+            var dishes = [
+                {id: 's1', name: 'Chicken Nuggets'},
+                {id: 's2', name: 'Chicken 65'},
+                {id: 's3', name: 'Fish Fry'},
+                {id: 'd1', name: 'Brownie'},
+                {id: 'd2', name: 'Chocolate Icecream'},
+                {id: 'd3', name: 'Chocolate Cake'},
+                {id: 'm1', name: 'Chicken Briyan'},
+                {id: 'm2', name: 'Mutton Briyn'},
+                {id: 'm3', name: 'Fish Briyan'}
+            ];
+
+            // Loop through all dishes and check their quantity
+            dishes.forEach(function(dish) {
+                var countElement = document.getElementById(dish.id + '-count');
+                var quantity = countElement.innerHTML;
+
+                // Only add to order if quantity is more than 0
+                if (quantity !== 'Add') {
+                    orderSummary.push(dish.name + ': ' + quantity);
+                }
+            });
+
+            // Display the order summary in the new div
+            var orderListElement = document.getElementById('order-list');
+            orderListElement.innerHTML = ''; // Clear previous order summary
+
+            if (orderSummary.length > 0) {
+                orderSummary.forEach(function(orderItem) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = orderItem;
+                    orderListElement.appendChild(listItem);
+                });
+            } else {
+                orderListElement.innerHTML = '<li>No items selected.</li>';
+            }
+        }
+
+        // Smooth scroll to order summary
+        document.getElementById('submit').addEventListener('click', function(e) {
+            e.preventDefault();
+            submitOrder();
+            document.getElementById('order-summary').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
-<script>
-    document.getElementById("hamburger").addEventListener("click", function () {
-        var nav = document.getElementById("nav");
-        nav.classList.toggle("open");
-    });
-    
-</script>
-
-
 </html>
-
