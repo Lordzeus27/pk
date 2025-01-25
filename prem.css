@@ -1,0 +1,311 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply global font family */
+body {
+    font-family: 'DM Serif Text', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* General container styling */
+#customer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Radley', serif;
+}
+
+#bar {
+    background: linear-gradient(90deg, #c5a5e0, #7d61d7);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#name h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#nav button {
+    background-color: #7d61d7;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nav button:hover {
+    background-color: #5a3bb7;
+}
+
+/* Shared Dish Container Styling */
+.dish-container {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Styling for individual dish items */
+#s1, #s2, #s3, #d1, #d2, #d3, #m1, #m2, #m3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.add {
+    display: inline-block;
+    width: 160px; /* Set a fixed width */
+    text-align: center;
+}
+
+.add button {
+    background-color: #7d61d7;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add button:hover {
+    background-color: #5a3bb7;
+}
+
+.fixed-width {
+    min-width: 50px; /* Minimum width for the 'Add' text */
+}
+
+/* Styling for the quantity buttons */
+.quantity-btn {
+    width: 30px; /* Adjust width of the buttons */
+    font-size: 20px;
+    background-color: #d3d3d3;
+    color: #333;
+    border: none;
+    padding: 5px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #bbb;
+}
+
+/* Input styling for quantity */
+input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#t {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #dish, #desert, #main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #name h1 {
+        font-size: 22px;
+    }
+
+    #bar {
+        padding: 15px;
+    }
+
+    #nav button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #dish, #desert, #main {
+        padding: 10px;
+    }
+
+    .quantity-btn {
+        font-size: 16px;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        padding: 6px;
+    }
+}
+/* Styling for each dish */
+.dish {
+    display: flex;
+    justify-content: space-between;  /* Dish name to the left and buttons to the right */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.dish p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Positioning the buttons to the right of the page */
+.add {
+    display: flex;
+    align-items: center;  /* Vertically align items */
+    justify-content: center;  /* Center the "Add" in the middle */
+    width: 150px;  /* Adjust width of button container */
+}
+
+/* Centering "Add" between buttons */
+.add button {
+    background-color: #7d61d7;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Buttons hover effect */
+.add button:hover {
+    background-color: #5a3bb7;
+}
+
+.fixed-width {
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 0 10px;  /* Add margin between buttons */
+}
+
+/* Styling for the quantity buttons */
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #7d61d7;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #5a3bb7;
+}
+
+/* Add a little spacing between dishes */
+.dish + .dish {
+    margin-top: 20px;
+}
+/* Hamburger Menu (Hidden by default on desktop) */
+#hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* When the screen size is small (Mobile) */
+@media screen and (max-width: 768px) {
+    #nav {
+        display: none; /* Hide navigation buttons by default */
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #nav button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+/* When the nav is toggled */
+#nav.open {
+    display: flex;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
