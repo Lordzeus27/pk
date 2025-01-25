@@ -133,6 +133,56 @@ input[type="number"] {
     font-size: 20px;
 }
 
+/* Submit button styling */
+#submit-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#submit {
+    background-color: #7d61d7;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Make the button width wider */
+}
+
+#submit:hover {
+    background-color: #5a3bb7;
+}
+
+/* Styling for the order summary div */
+#order-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+#order-summary h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#order-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+#order-summary li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     #bar {
@@ -185,6 +235,7 @@ input[type="number"] {
         padding: 6px;
     }
 }
+
 /* Styling for each dish */
 .dish {
     display: flex;
@@ -253,6 +304,7 @@ input[type="number"] {
 .dish + .dish {
     margin-top: 20px;
 }
+
 /* Hamburger Menu (Hidden by default on desktop) */
 #hamburger {
     display: none;
@@ -308,4 +360,3 @@ input[type="number"] {
         transform: translateY(0);
     }
 }
-
